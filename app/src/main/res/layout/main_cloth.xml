@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clothpage.MainCloth"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text1"
+        android:text="어떤 옷장을 편집할까?"
+        android:background="#99ccFF"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/springBtn"
+        android:text="봄/가을 옷장"
+        android:textColor="#901090"
+        android:background="#99ccFF"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/summerBtn"
+        android:text="여름 옷장"
+        android:textColor="#901090"
+        android:background="#99ccFF"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/winterBtn"
+        android:text="겨울 옷장"
+        android:textColor="#901090"
+        android:background="#99ccFF"/>
+</LinearLayout>
