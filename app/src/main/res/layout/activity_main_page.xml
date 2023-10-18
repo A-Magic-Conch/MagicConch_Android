@@ -62,17 +62,17 @@
         android:id="@+id/btngrp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
         android:orientation="horizontal"
-        android:visibility="visible">
+        android:visibility="visible"
+        android:layout_weight="1"
+        android:gravity="bottom">
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="261dp"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#00FFFFFF"
-            android:tint="#00FFFFFF"
             app:srcCompat="@drawable/btnimg1" />
 
         <ImageButton
