@@ -1,2 +1,5 @@
-package com.android.magicconch;public class Banner {
+package com.android.magicconch;
+
+public class Banner {
+
 }
