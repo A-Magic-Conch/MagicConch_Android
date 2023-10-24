@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1023008778861",
+    "project_id": "magicconch-android",
+    "storage_bucket": "magicconch-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023008778861:android:0047211e5a5aac4f81ed64",
+        "android_client_info": {
+          "package_name": "com.android.magicconch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7p6Ac64JInNcag37_DNbziYvLYub1gzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
