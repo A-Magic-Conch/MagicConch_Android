@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,5 +8,80 @@
     android:background="@drawable/closetadd_text"
     android:gravity="center">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="220dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="옷 이름" />
+
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/cloth_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="옷 이름을 입력하세요." />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="옷 두께" />
+
+            <CheckBox
+                android:layout_marginTop="10dp"
+                android:id="@+id/thin_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="얇음" />
+
+            <CheckBox
+                android:id="@+id/medium_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="중간" />
+
+            <CheckBox
+                android:id="@+id/thick_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="두꺼움" />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기타 설명칸" />
+
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:background="@drawable/edittext_border"
+                android:padding="10dp"
+                android:hint="설명을 입력하세요." />
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/complete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="작성 완료" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

@@ -36,12 +36,11 @@ public class RekAddPage extends AppCompatActivity {
 
         LocalDateTime now = LocalDateTime.now().minusHours(6);
         String baseDate = now.truncatedTo(ChronoUnit.DAYS).format(DateTimeFormatter.ofPattern("yyyyMMdd"));
-        String baseTime = now.truncatedTo(ChronoUnit.HOURS).format(DateTimeFormatter.ofPattern("HH")) + "00";
 
         WeatherApi weatherApi = retrofit.create(WeatherApi.class);
         Call<WeatherResponse> call = weatherApi.getWeather(
                 "y22xUV9DMD/dNGMQQurE6tO0slcOoTIZiiiaXT++N3HT08IfBj3VvNqlD7ynr/IbN1YkB+2tUGWoqxWW/X5uRg==",
-                "55", "92", "14", baseDate, baseTime, "json");
+                "55", "92", "14", baseDate,"14:00", "json");
 
         call.enqueue(new Callback<WeatherResponse>() {
             @Override
