@@ -1,70 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mypage_text">
+    android:orientation="vertical"
+    android:background="@drawable/mainpage_text"
+    android:gravity="center">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.2"
         android:drawableTint="#AA83BA"
-        android:text="UserID: "
+        android:paddingLeft="20dp"
+        android:text="오늘 뭐 먹지?"
         android:textColor="#AA83BA"
-        android:textSize="30dp"
+        android:textSize="24dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.188" />
+        android:gravity="bottom" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="History"
-        android:textColor="#43E1EC"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.255" />
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="528dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="1dp"
-        tools:ignore="MissingConstraints">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="6"
+        android:background="#FFFFFF">
+
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/white">
+            android:padding="16dp">
 
-
-            <Button
-                android:id="@+id/button"
+            <TextView
+                android:id="@+id/TV1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:text="1. 뭐먹징"
+                android:textColor="#7DAD1E"
+                android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/button2"
+            <TextView
+                android:id="@+id/TV2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_marginTop="10dp"
+                android:padding="40dp"
+                android:scrollbars="vertical"
+                android:text="2. 뭐먹징2"
+                android:textColor="#7DAD1E"
+                android:textSize="18sp" />
+
+            <!--            매운맛-->
+            <CheckBox
+                android:id="@+id/CB_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:checked="true"
+                android:text="매운맛" />
+
+            <SeekBar
+                android:id="@+id/SB_sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/CB_sp"
+                android:max="100"
+                android:progress="10"
+                android:progressBackgroundTint="#FF7DAD1E"
+                android:progressTint="#FF7DAD1E"
+                android:thumbTint="#FF7DAD1E" />
+
+            <!--            단맛-->
+            <CheckBox
+                android:id="@+id/CB_su"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:checked="true"
+                android:text="단맛" />
+
+            <SeekBar
+                android:id="@+id/SB_su"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/CB_su"
+                android:max="100"
+                android:progress="20"
+                android:progressBackgroundTint="#FF7DAD1E"
+                android:progressTint="#FF7DAD1E"
+                android:thumbTint="#FF7DAD1E" />
+
+            <!--            짠맛-->
+            <CheckBox
+                android:id="@+id/CB_sa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:checked="true"
+                android:text="짠맛" />
+
+            <SeekBar
+                android:id="@+id/SB_sa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/CB_sa"
+                android:max="100"
+                android:progress="30"
+                android:progressBackgroundTint="#FF7DAD1E"
+                android:progressTint="#FF7DAD1E"
+                android:thumbTint="#FF7DAD1E" />
+
+            <!--            수분-->
+            <CheckBox
+                android:id="@+id/CB_w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:checked="true"
+                android:text="수분" />
+
+            <SeekBar
+                android:id="@+id/SB_w"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/CB_w"
+                android:max="100"
+                android:progress="40"
+                android:progressBackgroundTint="#FF7DAD1E"
+                android:progressTint="#FF7DAD1E"
+                android:thumbTint="#FF7DAD1E" />
+
+
+            <TextView
+                android:id="@+id/TV3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="140dp"
+                android:scrollbars="vertical"
+                android:text="3. 뭐먹징3"
+                android:textColor="#7DAD1E"
+                android:textSize="18sp" />
         </LinearLayout>
-
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.7">
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nexttt"/>
+    </LinearLayout>
+
+</LinearLayout>
