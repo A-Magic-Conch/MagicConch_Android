@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MagicConch"
         tools:targetApi="31">
+        <activity android:name=".Mypage" android:exported="true"/>
         <activity
             android:name=".MainPage"
             android:exported="false" />
