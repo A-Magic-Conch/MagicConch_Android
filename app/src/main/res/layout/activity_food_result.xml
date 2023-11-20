@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/mainpage_text"
+    android:background="@drawable/food_bg"
     android:gravity="center">
 
     <TextView
@@ -22,12 +22,55 @@
         android:gravity="bottom" />
 
 <!--이미지 크기 고정시켜야됨-->
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="234dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:srcCompat="@drawable/food_img"
-        android:layout_weight="3" />
+        android:layout_weight="3">
+
+        <ProgressBar
+            android:id="@+id/pb1"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="30"
+            android:progressBackgroundTint="#808A8E89"
+            android:progressDrawable="@drawable/circle_progressbar"
+            android:progressTint="#A5FF91" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/food_img"
+            android:layout_width="157dp"
+            android:layout_height="164dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/food_img"
+            app:civ_border_color="#777777"
+            app:civ_border_overlay="true"
+            app:civ_border_width="4dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#628717"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="20dp">
+
+            <TextView
+                android:id="@+id/food_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text="음식이름 빠밤"
+                android:textColor="#D1CDCD"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -46,7 +89,7 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/TV1"
+                android:id="@+id/rest1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -56,13 +99,53 @@
                 android:textColor="#7DAD1E"
                 android:textSize="18sp" />
             <TextView
+                android:id="@+id/TV1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:text=""
+                android:textColor="#7DAD1E"
+                android:textSize="18sp" />
+            <TextView
                 android:id="@+id/TV2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:padding="10dp"
                 android:scrollbars="vertical"
-                android:text="test"
+                android:text=""
+                android:textColor="#7DAD1E"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/TV3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:text=""
+                android:textColor="#7DAD1E"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/TV4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:text=""
+                android:textColor="#7DAD1E"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/TV5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:text=""
                 android:textColor="#7DAD1E"
                 android:textSize="18sp" />
         </LinearLayout>

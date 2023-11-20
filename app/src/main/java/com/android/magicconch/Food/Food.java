@@ -50,10 +50,10 @@ public class Food extends AppCompatActivity {
                 seekBarValues.add("0");
                 seekBarValues.add("0");
                 seekBarValues.add("0");
-                seekBarValues.add(SB_sp.isEnabled() ? String.valueOf(SB_sp.getProgress()/10) : "0");
-                seekBarValues.add(SB_su.isEnabled() ? String.valueOf(SB_su.getProgress()/10) : "0");
-                seekBarValues.add(SB_sa.isEnabled() ? String.valueOf(SB_sa.getProgress()/10) : "0");
-                seekBarValues.add(SB_w.isEnabled() ? String.valueOf(SB_w.getProgress()/10) : "0");
+                seekBarValues.add(SB_sp.isEnabled() ? String.valueOf(SB_sp.getProgress()*.1f) : "0");
+                seekBarValues.add(SB_su.isEnabled() ? String.valueOf(SB_su.getProgress()*.1f) : "0");
+                seekBarValues.add(SB_sa.isEnabled() ? String.valueOf(SB_sa.getProgress()*.1f) : "0");
+                seekBarValues.add(SB_w.isEnabled() ? String.valueOf(SB_w.getProgress()*.1f) : "0");
 
                 Intent intent = new Intent(Food.this, Food_result.class);
                 intent.putStringArrayListExtra("seekBarValues", seekBarValues);
