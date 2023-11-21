@@ -38,8 +38,9 @@
                 android:textColor="@color/white"
                 android:textSize="50sp"
                 android:background="#80C0FF00"
-                android:text="옷 1"
-                android:textStyle="bold"/>
+                android:text="옷장 1"
+                android:textStyle="bold"
+                android:id="@+id/wincloset1_button"/>
 
             <Button
                 android:layout_width="100dp"
@@ -51,8 +52,9 @@
                 android:textColor="@color/white"
                 android:textSize="50sp"
                 android:background="#80C0FF00"
-                android:text="옷 2"
-                android:textStyle="bold"/>
+                android:text="옷장 2"
+                android:textStyle="bold"
+                android:id="@+id/wincloset2_button"/>
 
             <Button
                 android:layout_width="100dp"
@@ -64,8 +66,9 @@
                 android:textColor="@color/white"
                 android:textSize="50sp"
                 android:background="#80C0FF00"
-                android:text="옷 3"
-                android:textStyle="bold"/>
+                android:text="옷장 3"
+                android:textStyle="bold"
+                android:id="@+id/wincloset3_button"/>
 
 
             <Button

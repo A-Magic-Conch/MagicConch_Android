@@ -28,9 +28,15 @@
         <activity android:name=".clothpage.seasonpage.RekAddPage" />
         <activity android:name=".clothpage.seasonpage.SummerCloth" />
         <activity android:name=".clothpage.seasonpage.WinterCloth" />
-        <activity android:name=".clothpage.seasonpage.clothaddpage.closet.closet1"/>
-        <activity android:name=".clothpage.seasonpage.clothaddpage.closet.closet2"/>
-        <activity android:name=".clothpage.seasonpage.clothaddpage.closet.closet3"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.springcloset.spcloset1"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.springcloset.spcloset2"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.springcloset.spcloset3"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.summercloset.sucloset1"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.summercloset.sucloset2"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.summercloset.sucloset3"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.wintercloset.wincloset1"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.wintercloset.wincloset2"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.wintercloset.wincloset3"/>
         <activity android:name=".clothpage.seasonpage.clothaddpage.SpringautumAdd"
             android:windowSoftInputMode="adjustPan">
         </activity>

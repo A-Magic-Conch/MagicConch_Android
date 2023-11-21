@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cloth_types">
+        <item>아우터</item>
+        <item>상의</item>
+        <item>하의</item>
+        <item>신발</item>
+        <item>악세사리</item>
+    </string-array>
+</resources>

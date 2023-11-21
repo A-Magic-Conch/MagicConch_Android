@@ -1,13 +1,130 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".clothpage.seasonpage.clothaddpage.WinterAdd"
+    tools:context=".clothpage.seasonpage.clothaddpage.SpringautumAdd"
     android:orientation="vertical"
     android:background="@drawable/closetadd_text"
     android:gravity="center">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="220dp"
+        android:background="@android:color/white"
+        android:elevation="4dp">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="옷 종류"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#800080" />
+
+                <Spinner
+                    android:id="@+id/cloth_type_spinner"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"/>
+
+                <Button
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/picture_select_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사진 선택"
+                    android:textStyle="bold"
+                    android:background="#32CD32"
+                    android:textColor="@android:color/white"/>
+
+                <ImageView
+                    android:id="@+id/cloth_picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="옷 두께"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#800080" />
+
+                <CheckBox
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/thin_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="얇음"
+                    android:textColor="#000000" />
+
+                <CheckBox
+                    android:id="@+id/medium_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="중간"
+                    android:textColor="#000000" />
+
+                <CheckBox
+                    android:id="@+id/thick_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="두꺼움"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="기타 설명칸"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#800080" />
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:background="@drawable/edittext_border"
+                    android:padding="10dp"
+                    android:hint="설명을 입력하세요."
+                    android:textColorHint="#888888"
+                    android:textColor="#000000" />
+                <Button
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/complete_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="작성 완료"
+                    android:textStyle="bold"
+                    android:background="#32CD32"
+                    android:textColor="@android:color/white"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 </LinearLayout>

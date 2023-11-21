@@ -1,6 +1,7 @@
 package com.android.magicconch.clothpage.seasonpage.clothaddpage;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,12 +10,17 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -22,9 +28,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.magicconch.R;
-import com.android.magicconch.clothpage.seasonpage.clothaddpage.closet.closet1;
-import com.android.magicconch.clothpage.seasonpage.clothaddpage.closet.closet2;
-import com.android.magicconch.clothpage.seasonpage.clothaddpage.closet.closet3;
+import com.android.magicconch.clothpage.seasonpage.clothaddpage.springcloset.spcloset1;
+import com.android.magicconch.clothpage.seasonpage.clothaddpage.springcloset.spcloset2;
+import com.android.magicconch.clothpage.seasonpage.clothaddpage.springcloset.spcloset3;
+import com.bumptech.glide.Glide;
 
 import java.io.InputStream;
 
@@ -35,9 +42,14 @@ public class SpringautumAdd extends AppCompatActivity {
             "slacks1", "slacks2", "slacks3", "slacks4",
             "mantoman1", "mantoman2", "mantoman3", "mantoman4",
             "hood1", "hood2", "hood3", "hood4",
-            "coat1", "coat2"
+            "coat1", "coat2","new1", "new2","shoes1", "shoes2", "shoes3",
+            "aug1", "aug2", "bini1", "bini2", "bini3", "bini4",
+            "cap1", "geemo1", "geemo2", "geemo3", "geemo4",
+            "padding1", "padding2", "padding3", "padding4",
+            "mus1", "mus2", "mo1", "mo2", "mo3", "mo4",
+            "new1", "new2", "snic1"
     };
-    EditText clothNameEditText;
+
     CheckBox thinCheckBox, mediumCheckBox, thickCheckBox;
     EditText descriptionEditText;
     Button completeButton, pictureSelectButton;
@@ -87,14 +99,12 @@ public class SpringautumAdd extends AppCompatActivity {
         }
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.springautm_add);
         setTitle("봄 옷 추가페이지");
 
-        clothNameEditText = findViewById(R.id.cloth_name);
         thinCheckBox = findViewById(R.id.thin_check);
         mediumCheckBox = findViewById(R.id.medium_check);
         thickCheckBox = findViewById(R.id.thick_check);
@@ -108,6 +118,30 @@ public class SpringautumAdd extends AppCompatActivity {
                 R.array.cloth_types, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         clothTypeSpinner.setAdapter(adapter);
+
+        pictureSelectButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(SpringautumAdd.this);
+                dialog.setContentView(R.layout.custom_dialog);
+
+                GridView gridView = dialog.findViewById(R.id.custom_dialog_gridview);
+                ImageAdapter adapter = new ImageAdapter(SpringautumAdd.this, imageNames);
+                gridView.setAdapter(adapter);
+
+                gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        String selectedImageName = imageNames[position];
+                        selectedImageResId = getResources().getIdentifier(selectedImageName, "drawable", getPackageName());
+                        clothPictureImageView.setImageResource(selectedImageResId);
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+            }
+        });
         clothTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -120,76 +154,66 @@ public class SpringautumAdd extends AppCompatActivity {
             }
         });
 
-        pictureSelectButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(SpringautumAdd.this);
-                builder.setTitle("Select a picture")
-                        .setItems(imageNames, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                String selectedImageName = imageNames[which];
-                                selectedImageResId = getResources().getIdentifier(selectedImageName, "drawable", getPackageName());
-                                clothPictureImageView.setImageResource(selectedImageResId);
-                            }
-                        });
-                AlertDialog dialog = builder.create();
-                dialog.show();
-            }
-        });
-
         completeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String clothName = clothNameEditText.getText().toString();
-                final boolean isThin = thinCheckBox.isChecked();
-                final boolean isMedium = mediumCheckBox.isChecked();
-                final boolean isThick = thickCheckBox.isChecked();
-                final String description = descriptionEditText.getText().toString();
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(SpringautumAdd.this);
-                builder.setTitle("Select a closet")
+                builder.setTitle("옷장을 선택하세요.")
                         .setItems(new String[]{"옷장 1", "옷장 2", "옷장 3"}, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 SharedPreferences sharedPreferences;
                                 String closet = null;
+                                final Class closetClass;
                                 switch (which) {
                                     case 0:
                                         closet = "Closet1";
+                                        closetClass = spcloset1.class;
                                         break;
                                     case 1:
                                         closet = "Closet2";
+                                        closetClass = spcloset2.class;
                                         break;
                                     case 2:
                                         closet = "Closet3";
+                                        closetClass = spcloset3.class;
                                         break;
                                     default:
                                         throw new IllegalArgumentException("Invalid closet number");
                                 }
-
                                 sharedPreferences = getSharedPreferences(closet, MODE_PRIVATE);
-
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
-
-                                String clothKey = "clothName" + clothType;
-                                editor.putString(clothKey, clothName);
-
-                                String isThinKey = "isThin" + clothType;
-                                editor.putBoolean(isThinKey, isThin);
-
-                                String isMediumKey = "isMedium" + clothType;
-                                editor.putBoolean(isMediumKey, isMedium);
-
-                                String isThickKey = "isThick" + clothType;
-                                editor.putBoolean(isThickKey, isThick);
-
-                                String descriptionKey = "description" + clothType;
-                                editor.putString(descriptionKey, description);
-
                                 String selectedImageResIdKey = "selectedImageResId" + clothType;
                                 editor.putInt(selectedImageResIdKey, selectedImageResId);
+                                editor.apply();
 
-                                editor.apply();
-                                editor.apply();
+                                // 로딩창 생성
+                                Dialog loadingDialog = new Dialog(SpringautumAdd.this);
+                                loadingDialog.setContentView(R.layout.loading_dialog);
+                                loadingDialog.setCancelable(false);
+                                ImageView loadingImage = loadingDialog.findViewById(R.id.loading_image);
+                                Glide.with(SpringautumAdd.this).load(R.drawable.check).into(loadingImage);
+
+                                // Dialog의 위치와 크기 설정
+                                Window window = loadingDialog.getWindow();
+                                if (window != null) {
+                                    WindowManager.LayoutParams params = new WindowManager.LayoutParams();
+                                    params.width = WindowManager.LayoutParams.WRAP_CONTENT;
+                                    params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                                    params.gravity = Gravity.CENTER;
+                                    window.setAttributes(params);
+                                }
+
+                                loadingDialog.show();
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if (loadingDialog.isShowing()) {
+                                            loadingDialog.dismiss();
+                                        }
+                                        Intent intent = new Intent(SpringautumAdd.this, closetClass);
+                                        startActivity(intent);
+                                    }
+                                }, 3000);
                             }
                         });
                 AlertDialog dialog = builder.create();

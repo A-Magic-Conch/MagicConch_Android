@@ -13,6 +13,20 @@
         android:layout_marginLeft="116dp"
         android:id="@+id/imageView_weatherIcon" />
 
+    <ImageView
+        android:layout_height="260dp"
+        android:layout_width="115dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="73dp"
+        android:id="@+id/imageView_topClothes" />
+
+    <ImageView
+        android:layout_height="260dp"
+        android:layout_width="117dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="222dp"
+        android:id="@+id/imageView_bottomClothes" />
+
     <TextView
         android:id="@+id/tv_temperature"
         android:layout_width="wrap_content"
@@ -32,6 +46,4 @@
         android:textStyle="bold"
         android:layout_marginTop="360dp"
         android:layout_marginLeft="180dp"/>
-
-
 </RelativeLayout>
