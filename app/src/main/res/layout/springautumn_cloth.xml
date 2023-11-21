@@ -25,52 +25,55 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_marginBottom="200dp"
+            android:layout_marginBottom="155dp"
             android:gravity="center_vertical">
 
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="335dp"
-            android:padding="20dp"
-            android:gravity="top|center_horizontal"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="55dp"
-            android:textColor="@color/white"
-            android:textSize="50sp"
-            android:background="#80C0FF00"
-            android:text="옷장1"
-            android:textStyle="bold"/>
+            <Button
+                android:id="@+id/closet1_button"
+                android:layout_width="100dp"
+                android:layout_height="355dp"
+                android:padding="20dp"
+                android:gravity="top|center_horizontal"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="55dp"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:background="#80C0FF00"
+                android:text="옷장1"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/closet2_button"
+                android:layout_width="100dp"
+                android:layout_height="355dp"
+                android:padding="20dp"
+                android:gravity="top|center_horizontal"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:background="#80C0FF00"
+                android:text="옷장2"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/closet3_button"
+                android:layout_width="100dp"
+                android:layout_height="355dp"
+                android:padding="20dp"
+                android:gravity="top|center_horizontal"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:background="#80C0FF00"
+                android:text="옷장3"
+                android:textStyle="bold"/>
+
 
         <Button
             android:layout_width="100dp"
-            android:layout_height="335dp"
-            android:padding="20dp"
-            android:gravity="top|center_horizontal"
-            android:layout_marginTop="55dp"
-            android:layout_marginRight="5dp"
-            android:textColor="@color/white"
-            android:textSize="50sp"
-            android:background="#80C0FF00"
-            android:text="옷장2"
-            android:textStyle="bold"/>
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="335dp"
-            android:padding="20dp"
-            android:gravity="top|center_horizontal"
-            android:layout_marginTop="55dp"
-            android:layout_marginRight="5dp"
-            android:textColor="@color/white"
-            android:textSize="50sp"
-            android:background="#80C0FF00"
-            android:text="옷장3"
-            android:textStyle="bold"/>
-
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="335dp"
+            android:layout_height="355dp"
             android:padding="20dp"
             android:gravity="top|center_horizontal"
             android:layout_marginTop="55dp"
@@ -84,7 +87,7 @@
 
         <Button
             android:layout_width="100dp"
-            android:layout_height="335dp"
+            android:layout_height="355dp"
             android:padding="20dp"
             android:gravity="top|center_horizontal"
             android:layout_marginTop="55dp"

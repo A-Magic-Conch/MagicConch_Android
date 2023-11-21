@@ -1,6 +1,7 @@
 package com.android.magicconch.clothpage.seasonpage;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.android.magicconch.R;
@@ -19,6 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RekAddPage extends AppCompatActivity {
     private TextView tvSky;
     private TextView tvTemperature;
+    private ImageView imageViewWeatherIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class RekAddPage extends AppCompatActivity {
 
         tvSky = findViewById(R.id.tv_sky);
         tvTemperature = findViewById(R.id.tv_temperature);
+        imageViewWeatherIcon = findViewById(R.id.imageView_weatherIcon);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/")
@@ -40,7 +43,7 @@ public class RekAddPage extends AppCompatActivity {
         WeatherApi weatherApi = retrofit.create(WeatherApi.class);
         Call<WeatherResponse> call = weatherApi.getWeather(
                 "y22xUV9DMD/dNGMQQurE6tO0slcOoTIZiiiaXT++N3HT08IfBj3VvNqlD7ynr/IbN1YkB+2tUGWoqxWW/X5uRg==",
-                "55", "92", "14", baseDate,"14:00", "json");
+                "55", "92", "14", "20231118","1400", "json");
 
         call.enqueue(new Callback<WeatherResponse>() {
             @Override
@@ -57,12 +60,16 @@ public class RekAddPage extends AppCompatActivity {
                     if (item.category.equals("SKY")) {
                         if (item.fcstValue.equals("1")) {
                             sky = "맑음 ";
+                            imageViewWeatherIcon.setImageResource(R.drawable.sun);
                         } else if (item.fcstValue.equals("2")) {
                             sky = "비 ";
+                            imageViewWeatherIcon.setImageResource(R.drawable.rain);
                         } else if (item.fcstValue.equals("3")) {
                             sky = "구름많음 ";
+                            imageViewWeatherIcon.setImageResource(R.drawable.suncloud);
                         } else if (item.fcstValue.equals("4")) {
                             sky = "흐림 ";
+                            imageViewWeatherIcon.setImageResource(R.drawable.cloud);
                         }
                     }
 

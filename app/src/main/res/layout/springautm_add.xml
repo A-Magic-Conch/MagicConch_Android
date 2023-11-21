@@ -32,6 +32,33 @@
                 android:layout_height="wrap_content"
                 android:hint="옷 이름을 입력하세요." />
 
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/picture_select_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사진 선택" />
+
+            <ImageView
+                android:id="@+id/cloth_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_gallery" />
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="옷 종류" />
+
+            <Spinner
+                android:id="@+id/cloth_type_spinner"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
             <TextView
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"

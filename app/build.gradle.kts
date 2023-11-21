@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation ("com.google.code.gson:gson:2.8.8")
     coreLibraryDesugaring ("com.android.tools:desugar_jdk_libs:1.1.5")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")

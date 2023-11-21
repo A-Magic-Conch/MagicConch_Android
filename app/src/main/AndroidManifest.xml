@@ -28,6 +28,9 @@
         <activity android:name=".clothpage.seasonpage.RekAddPage" />
         <activity android:name=".clothpage.seasonpage.SummerCloth" />
         <activity android:name=".clothpage.seasonpage.WinterCloth" />
+        <activity android:name=".clothpage.seasonpage.clothaddpage.closet.closet1"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.closet.closet2"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.closet.closet3"/>
         <activity android:name=".clothpage.seasonpage.clothaddpage.SpringautumAdd"
             android:windowSoftInputMode="adjustPan">
         </activity>
