@@ -9,6 +9,6 @@ public class PostResult {
     private String result;
     @Override
     public String toString() {
-        return "결과: " + result;
+        return result;
     }
 }
