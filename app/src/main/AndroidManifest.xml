@@ -12,10 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MagicConch"
         tools:targetApi="31">
-        <activity android:name=".Mypage" android:exported="true"/>
         <activity
             android:name=".MainPage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Login"
             android:exported="true" />
@@ -28,6 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Mypage" android:exported="true"/>
     </application>
 
 </manifest>

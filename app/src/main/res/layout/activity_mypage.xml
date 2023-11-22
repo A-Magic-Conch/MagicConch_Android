@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mypage_text">
+    android:background="@drawable/mypage_text"
+    android:foregroundTint="#A982B9">
 
     <TextView
         android:id="@+id/textView"
@@ -16,7 +17,7 @@
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/name1"
         app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,16 +27,18 @@
         android:id="@+id/name1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:accessibilityHeading="false"
+        android:gravity="left"
         android:text="TextView"
         android:textColor="#AA83BA"
-        android:textSize="25dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintVertical_bias="0.201" />
 
     <TextView
         android:id="@+id/textView2"
@@ -53,6 +56,7 @@
         app:layout_constraintVertical_bias="0.255" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="407dp"
         android:layout_height="485dp"
         android:layout_marginBottom="80px"
@@ -76,9 +80,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="날짜: " />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
         </LinearLayout>
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="75dp"
+        android:layout_height="41dp"
+        android:background="#A982B9"
+        android:text="메인"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
