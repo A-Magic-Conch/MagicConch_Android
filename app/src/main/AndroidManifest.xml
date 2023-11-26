@@ -28,6 +28,12 @@
             android:name=".Login"
             android:exported="true" />
         <activity
+            android:name=".activity.Activity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.Activity_result"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>

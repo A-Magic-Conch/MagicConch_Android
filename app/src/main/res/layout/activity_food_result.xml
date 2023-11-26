@@ -244,16 +244,16 @@
                     android:scaleY="1.5" />
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/rest1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:padding="10dp"
-                android:scrollbars="vertical"
-                android:text="근처 음식점 추천.."
-                android:textColor="#7DAD1E"
-                android:textSize="18sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/rest1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:padding="10dp"-->
+<!--                android:scrollbars="vertical"-->
+<!--                android:text="근처 음식점 추천.."-->
+<!--                android:textColor="#7DAD1E"-->
+<!--                android:textSize="18sp" />-->
 
         </LinearLayout>
     </ScrollView>
@@ -263,12 +263,12 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="0.7">
-        <Button
-            android:id="@+id/next"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="저장 이런버튼"/>
+        android:layout_weight="0.5">
+<!--        <Button-->
+<!--            android:id="@+id/next"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="저장 이런버튼"/>-->
     </LinearLayout>
 
 </LinearLayout>
