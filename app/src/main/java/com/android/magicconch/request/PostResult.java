@@ -1,4 +1,4 @@
-package com.android.magicconch.Food;
+package com.android.magicconch.request;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 // DTO 모델 - PostResult Class 선언
 public class PostResult {
     @SerializedName("result")
-    private String result;
+    public String result;
     @Override
     public String toString() {
         return result;

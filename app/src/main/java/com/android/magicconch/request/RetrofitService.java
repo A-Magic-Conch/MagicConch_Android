@@ -1,13 +1,11 @@
-package com.android.magicconch.Food;
-
-import java.util.List;
+package com.android.magicconch.request;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface RetrofitService {
-    @GET("api")
+    @GET("api/food")
     Call<PostResult> getPosts(
             @Query("p1") String p1,
             @Query("p2") String p2,
