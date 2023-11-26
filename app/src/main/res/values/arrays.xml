@@ -7,4 +7,32 @@
         <item>신발</item>
         <item>악세사리</item>
     </string-array>
+    <string-array name="food_types">
+        <item>전체</item>
+        <item>한식</item>
+        <item>중식</item>
+        <item>일식</item>
+        <item>양식</item>
+        <item>기타</item>
+    </string-array>
+    <string-array name="dish_types">
+        <item>전체</item>
+        <item>밥</item>
+        <item>면</item>
+        <item>국물</item>
+        <item>찜</item>
+        <item>구이</item>
+        <item>튀김</item>
+        <item>볶음</item>
+        <item>제과</item>
+        <item>기타</item>
+    </string-array>
+    <string-array name="ingredient_types">
+        <item>전체</item>
+        <item>곡류</item>
+        <item>육류</item>
+        <item>채소류</item>
+        <item>어패류</item>
+        <item>과일류</item>
+    </string-array>
 </resources>

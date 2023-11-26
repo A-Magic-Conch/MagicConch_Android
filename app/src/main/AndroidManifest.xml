@@ -17,8 +17,15 @@
         android:theme="@style/Theme.MagicConch"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
             android:name=".MainPage"
+            android:exported="true" />
+        <activity
+            android:name=".Food.Food"
+            android:exported="true" />
+        <activity
+            android:name=".Food.Food_result"
             android:exported="true" />
         <activity
             android:name=".Login"
@@ -44,7 +51,7 @@
         <activity android:name=".clothpage.seasonpage.clothaddpage.WinterAdd" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -52,5 +59,4 @@
         </activity>
         <activity android:name=".Mypage" android:exported="true"/>
     </application>
-
 </manifest>
