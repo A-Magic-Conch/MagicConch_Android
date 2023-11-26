@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -11,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MagicConch"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
             android:name=".MainPage"
@@ -18,12 +23,30 @@
         <activity
             android:name=".Login"
             android:exported="true" />
+        <activity android:name=".clothpage.MainCloth" />
+        <activity android:name=".clothpage.seasonpage.SpringautumCloth" />
+        <activity android:name=".clothpage.seasonpage.RekAddPage" />
+        <activity android:name=".clothpage.seasonpage.SummerCloth" />
+        <activity android:name=".clothpage.seasonpage.WinterCloth" />
+        <activity android:name=".clothpage.seasonpage.clothaddpage.springcloset.spcloset1"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.springcloset.spcloset2"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.springcloset.spcloset3"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.summercloset.sucloset1"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.summercloset.sucloset2"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.summercloset.sucloset3"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.wintercloset.wincloset1"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.wintercloset.wincloset2"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.wintercloset.wincloset3"/>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.SpringautumAdd"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity android:name=".clothpage.seasonpage.clothaddpage.SummerAdd" />
+        <activity android:name=".clothpage.seasonpage.clothaddpage.WinterAdd" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

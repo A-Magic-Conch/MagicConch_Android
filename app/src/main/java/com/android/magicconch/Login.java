@@ -2,6 +2,17 @@ package com.android.magicconch;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.common.api.ApiException;
+
+import com.google.android.gms.tasks.Task;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import androidx.annotation.NonNull;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -66,6 +77,16 @@ public class Login extends AppCompatActivity {
 
             // 로그인 성공
             String idToken = account.getIdToken();
+            // idToken을 서버로 전송하여 사용자 인증 처리 가능
+            // MainPage(또는 대상 액티비티)로 이동
+            Intent intent = new Intent(this, MainPage.class); // MainPageActivity는 대상 액티비티의 이름
+            startActivity(intent);
+            finish(); // 현재 액티비티를 종료하여 뒤로 가기 버튼을 누르면 로그인 화면이 나타나지 않도록 함
+
+        } catch (ApiException e) {
+            // 로그인 실패
+            Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
+        }
             // 사용자 정보를 SharedPreferences에 저장
             saveUserInfo(account.getDisplayName(), account.getEmail());
             Log.d(TAG, "User info saved: " + account.getDisplayName() + ", " + account.getEmail());

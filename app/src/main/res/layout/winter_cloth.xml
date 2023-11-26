@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clothpage.seasonpage.WinterCloth"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/closetadd2_text">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="겨울 옷장 편집중..."
+        android:textColor="#901090"
+        android:textSize="28sp"
+        android:layout_marginTop="170dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="155dp"
+            android:gravity="center_vertical">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="355dp"
+                android:padding="20dp"
+                android:gravity="top|center_horizontal"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="55dp"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:background="#80C0FF00"
+                android:text="옷장 1"
+                android:textStyle="bold"
+                android:id="@+id/wincloset1_button"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="355dp"
+                android:padding="20dp"
+                android:gravity="top|center_horizontal"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:background="#80C0FF00"
+                android:text="옷장 2"
+                android:textStyle="bold"
+                android:id="@+id/wincloset2_button"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="355dp"
+                android:padding="20dp"
+                android:gravity="top|center_horizontal"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:background="#80C0FF00"
+                android:text="옷장 3"
+                android:textStyle="bold"
+                android:id="@+id/wincloset3_button"/>
+
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="355dp"
+                android:padding="20dp"
+                android:gravity="top|center_horizontal"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="5dp"
+                android:text="+"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:background="#80C0FF00"
+                android:id="@+id/WinAddPage"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="355dp"
+                android:padding="20dp"
+                android:gravity="top|center_horizontal"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:text="추천"
+                android:textStyle="bold"
+                android:background="#80C0FF00"
+                android:id="@+id/goToRekAddPage"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>
