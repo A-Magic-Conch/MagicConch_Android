@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.MagicConch" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="Base.Theme.MagicConch" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">#B0E0E6</item>
         <item name="colorPrimaryDark">#4682B4</item>
     </style>

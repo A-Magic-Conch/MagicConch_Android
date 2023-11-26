@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.content.SharedPreferences;
 import android.widget.Toast;
+
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -16,7 +17,7 @@ import com.google.android.gms.tasks.Task;
 
 public class Login extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
-    private static final int RC_SIGN_IN = 9001;
+    private static final int RC_SIGN_IN = 9001; // 예시 상수, 필요에 따라 변경
     private static final String TAG = "LoginActivity";
 
     @Override
@@ -30,6 +31,7 @@ public class Login extends AppCompatActivity {
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
+        // 로그인 버튼 클릭 시 OAuth 플로우 시작
         findViewById(R.id.imgBtn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,6 +78,7 @@ public class Login extends AppCompatActivity {
         }
     }
 
+    // 사용자 정보를 SharedPreferences에 저장하는 메서드
     private void saveUserInfo(String displayName, String email) {
         SharedPreferences preferences = getSharedPreferences("user_info", MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();

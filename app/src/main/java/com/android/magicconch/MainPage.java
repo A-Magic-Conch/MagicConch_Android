@@ -10,6 +10,8 @@ import android.widget.ImageButton;
 
 import com.android.magicconch.clothpage.MainCloth;
 
+import com.android.magicconch.Food.Food;
+
 public class MainPage extends AppCompatActivity {
 
     Button ClothBtn;
@@ -33,7 +35,6 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
-
         findViewById(R.id.imageButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +49,14 @@ public class MainPage extends AppCompatActivity {
             public void onClick(View v) {
                 // 버튼 클릭 시 mypage
                 Intent intent = new Intent(MainPage.this, Mypage.class); // Login은 이동하려는 액티비티의 클래스 이름
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.imgBtn2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPage.this, Food.class);
                 startActivity(intent);
             }
         });
