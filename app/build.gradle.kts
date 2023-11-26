@@ -40,6 +40,9 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.firebase:firebase-auth:22.3.0")
+    implementation("com.google.firebase:firebase-auth")
     testImplementation("junit:junit:4.13.2")
     implementation("com.google.firebase:firebase-analytics")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -54,8 +57,14 @@ dependencies {
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     // Converter ( JSON 타입 결과를 객체로 매핑 )
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation("com.google.firebase:firebase-analytics")
 
 
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
+}
+=======
+
 }

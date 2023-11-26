@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">magicConch</string>
+    <string name="android_key1">818751609513-omild9bujrc177boudfct6tq6ri9eqtd.apps.googleusercontent.com</string>
+    <string name="android_key2">818751609513-6bbbpv0mua29395up9kjlrq3aevibf73.apps.googleusercontent.com</string>
+    <string name="web_key">818751609513-52frdq7e8kqi03o20ntjplc77gt8ggue.apps.googleusercontent.com</string>
 </resources>

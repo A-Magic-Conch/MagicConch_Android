@@ -16,8 +16,6 @@
         android:baselineAligned="false"
         android:gravity="center|bottom"
         android:orientation="horizontal">
-
-
         <ImageButton
             android:id="@+id/imgBtn1"
             android:layout_width="48dp"
@@ -29,7 +27,7 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/closet_img"
             android:contentDescription="옷장 이미지 버튼" />
-
+            app:srcCompat="@drawable/closet_img" />
         <ImageButton
             android:id="@+id/imgBtn2"
             android:layout_width="48dp"
@@ -41,6 +39,7 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/food_img"
             android:contentDescription="음식 이미지 버튼" />
+            app:srcCompat="@drawable/food_img" />
 
         <ImageButton
             android:id="@+id/imgBtn3"
@@ -54,7 +53,7 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/activity_img"
             android:contentDescription="활동 이미지 버튼" />
-
+            app:srcCompat="@drawable/activity_img" />
     </LinearLayout>
 
     <LinearLayout
@@ -90,6 +89,7 @@
             android:backgroundTint="#00FFFFFF"
             app:srcCompat="@drawable/btnimg1"
             android:contentDescription="첫 번째 이미지 버튼" />
+            app:srcCompat="@drawable/btnimg1" />
 
         <ImageButton
             android:id="@+id/imageButton2"
@@ -99,8 +99,8 @@
             android:backgroundTint="#00FFFFFF"
             app:srcCompat="@drawable/btnimg2"
             android:contentDescription="두 번째 이미지 버튼" />
+            app:srcCompat="@drawable/btnimg2" />
 
     </LinearLayout>
-
-
+</LinearLayout>
 </LinearLayout>
