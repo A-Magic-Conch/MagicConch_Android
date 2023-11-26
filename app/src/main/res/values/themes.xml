@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.MagicConch" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.MagicConch" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#B0E0E6</item>
+        <item name="colorPrimaryDark">#4682B4</item>
     </style>
 
     <style name="Theme.MagicConch" parent="Base.Theme.MagicConch" />

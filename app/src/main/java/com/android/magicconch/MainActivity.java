@@ -1,7 +1,7 @@
 package com.android.magicconch;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent; // Intent 클래스를 import해야 합니다.
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
