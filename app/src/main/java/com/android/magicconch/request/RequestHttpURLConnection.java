@@ -1,4 +1,4 @@
-package com.android.magicconch.Food;
+package com.android.magicconch.request;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

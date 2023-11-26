@@ -1,24 +1,20 @@
 package com.android.magicconch.Food;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.SeekBar;
-import android.widget.Toast;
 
-import com.android.magicconch.MainActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.magicconch.R;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Food extends AppCompatActivity {
     private CheckBox CB_sp;
