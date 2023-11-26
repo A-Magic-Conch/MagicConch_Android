@@ -3,6 +3,8 @@ package com.android.magicconch;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +21,9 @@ public class Mypage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mypage);
 
+    }
+
+}
         // 사용자 정보를 SharedPreferences에서 불러와서 표시
         SharedPreferences preferences = getSharedPreferences("user_info", MODE_PRIVATE);
         String userEmail = preferences.getString("email", ""); // "email" 키를 사용하여 이메일을 불러옴
@@ -51,4 +56,3 @@ public class Mypage extends AppCompatActivity {
 
     }
 }
-
