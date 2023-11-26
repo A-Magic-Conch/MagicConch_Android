@@ -16,10 +16,6 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
         android:gravity="center"
-        android:text="로그인"
-        android:textColor="@color/white"
-        android:textSize="35dp"
-        android:textStyle="bold"
         />
 
     <EditText
@@ -71,6 +67,16 @@
         android:layout_marginBottom="20dp"
         android:backgroundTint="#AA83BA"
         android:text="LOGIN" />
+
+    <Button
+        android:id="@+id/signupbtn"
+        android:layout_width="141dp"
+        android:layout_height="69dp"
+        android:layout_below="@id/loginbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#AA83BA"
+        android:text="Sign Up" />
 
 
     <LinearLayout

@@ -35,6 +35,7 @@
         <activity android:name=".clothpage.seasonpage.RekAddPage" />
         <activity android:name=".clothpage.seasonpage.SummerCloth" />
         <activity android:name=".clothpage.seasonpage.WinterCloth" />
+        <activity android:name=".SignUpActivity" />
         <activity android:name=".clothpage.seasonpage.clothaddpage.springcloset.spcloset1"/>
         <activity android:name=".clothpage.seasonpage.clothaddpage.springcloset.spcloset2"/>
         <activity android:name=".clothpage.seasonpage.clothaddpage.springcloset.spcloset3"/>

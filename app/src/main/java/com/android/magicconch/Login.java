@@ -1,41 +1,83 @@
 package com.android.magicconch;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.content.SharedPreferences;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Login extends AppCompatActivity {
-    private GoogleSignInClient mGoogleSignInClient;
-    private static final int RC_SIGN_IN = 9001; // 예시 상수, 필요에 따라 변경
+
     private static final String TAG = "LoginActivity";
+    private static final int RC_SIGN_IN = 10;
+    private GoogleSignInClient mGoogleSignInClient;
+    private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
+
+    private EditText mUsernameField;
+    private EditText mPasswordField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        mUsernameField = findViewById(R.id.username);
+        mPasswordField = findViewById(R.id.password);
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            Intent intent = new Intent(Login.this, MainPage.class);
+            startActivity(intent);
+            finish();
+            return;
+        }
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        // 로그인 버튼 클릭 시 OAuth 플로우 시작
+        findViewById(R.id.signupbtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this, SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
+
         findViewById(R.id.imgBtn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signIn();
+            }
+        });
+
+        findViewById(R.id.loginbtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login();
             }
         });
     }
@@ -45,8 +87,25 @@ public class Login extends AppCompatActivity {
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
+    private void login() {
+        String email = mUsernameField.getText().toString();
+        String password = mPasswordField.getText().toString();
+
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        updateUI(user);
+                    } else {
+                        Toast.makeText(Login.this, "Authentication failed.",
+                                Toast.LENGTH_SHORT).show();
+                        updateUI(null);
+                    }
+                });
+    }
+
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == RC_SIGN_IN) {
@@ -58,32 +117,32 @@ public class Login extends AppCompatActivity {
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
-
-            // 로그인 성공
-            String idToken = account.getIdToken();
-
-            // 사용자 정보를 SharedPreferences에 저장
-            saveUserInfo(account.getDisplayName(), account.getEmail());
-            Log.d(TAG, "User info saved: " + account.getDisplayName() + ", " + account.getEmail());
-
-            // MainPage(또는 대상 액티비티)로 이동
-            Intent intent = new Intent(this, MainPage.class); // MainPageActivity는 대상 액티비티의 이름
-            startActivity(intent);
-            finish(); // 현재 액티비티를 종료하여 뒤로 가기 버튼을 누르면 로그인 화면이 나타나지 않도록 함
-
+            firebaseAuthWithGoogle(account.getIdToken());
         } catch (ApiException e) {
-            // 로그인 실패
-            Toast.makeText(getApplicationContext(),"로그인 실패.",Toast.LENGTH_SHORT).show();
             Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
+            updateUI(null);
         }
     }
 
-    // 사용자 정보를 SharedPreferences에 저장하는 메서드
-    private void saveUserInfo(String displayName, String email) {
-        SharedPreferences preferences = getSharedPreferences("user_info", MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString("display_name", displayName);
-        editor.putString("email", email);
-        editor.apply();
+    private void firebaseAuthWithGoogle(String idToken) {
+        AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        updateUI(user);
+                    } else {
+                        Log.w(TAG, "signInWithCredential:failure", task.getException());
+                        updateUI(null);
+                    }
+                });
+    }
+
+    private void updateUI(FirebaseUser user) {
+        if (user != null) {
+            Intent intent = new Intent(this, MainPage.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }
