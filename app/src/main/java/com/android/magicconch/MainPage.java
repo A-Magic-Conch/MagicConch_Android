@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import com.android.magicconch.clothpage.MainCloth;
 
 import com.android.magicconch.Food.Food;
+import com.android.magicconch.activity.Activity;
 
 public class MainPage extends AppCompatActivity {
 
@@ -57,6 +58,14 @@ public class MainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainPage.this, Food.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.imgBtn3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPage.this, Activity.class);
                 startActivity(intent);
             }
         });

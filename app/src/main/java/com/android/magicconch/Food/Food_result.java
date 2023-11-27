@@ -36,7 +36,7 @@ public class Food_result extends AppCompatActivity {
     private ProgressBar PB1, PB2, PB3, PB4;
     private TextView Food_name;
     private ImageView Food_img;
-    private Button btn;
+//    private Button btn;
     private ProgressBar progressBar;
     private int limit, progress;
     private List<TextView> textViewList = new ArrayList<>();
@@ -69,10 +69,10 @@ public class Food_result extends AppCompatActivity {
 
         Food_name = findViewById(R.id.food_name);
         Food_img = findViewById(R.id.food_img);
-        btn = findViewById(R.id.next);
+//        btn = findViewById(R.id.next);
 
-        if (SV != null)
-            btn.setText(String.format("%s,%s,%s,%s", SV.get(3), SV.get(4), SV.get(5), SV.get(6)));
+//        if (SV != null)
+//            btn.setText(String.format("%s,%s,%s,%s", SV.get(3), SV.get(4), SV.get(5), SV.get(6)));
 
 
 //        btn.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +98,7 @@ public class Food_result extends AppCompatActivity {
                         // 문자열 처리를 통해 '['와 ']'를 제거하고 ','로 split
                         result_s=result.toString();
                         if (result_s.equals("")) {
-                            twoDimArray = new String[][]{{"이건 괴식임", "r", "", "", "", "", "100.0", "none"}, {"행운의 메뉴 뽑기", "r", "r", "r", "r", "r", "101"}};
+                            twoDimArray = new String[][]{{"결과가 없습니다..", "r", "", "", "", "", "100.0", "none"}, {"행운의 메뉴 뽑기", "r", "r", "r", "r", "r", "101"}};
                         }
                         else {
                             String[] rows = result_s.substring(3, result_s.length() - 2).split("\\], \\[");

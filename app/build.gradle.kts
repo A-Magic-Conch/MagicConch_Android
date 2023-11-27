@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     // Add the Google services Gradle plugin
     id("com.google.gms.google-services")
+
+
 }
 
 android {
@@ -25,18 +27,17 @@ android {
         }
     }
     compileOptions {
-
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
-
 dependencies {
     implementation ("com.github.bumptech.glide:glide:4.13.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.13.0")
     implementation ("com.google.code.gson:gson:2.8.8")
     coreLibraryDesugaring ("com.android.tools:desugar_jdk_libs:1.1.5")
     implementation("com.google.android.material:material:1.4.0")
+    implementation("com.nex3z:flow-layout:1.2.4")
     implementation("com.github.bumptech.glide:glide:4.12.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
     implementation("androidx.cardview:cardview:1.0.0")

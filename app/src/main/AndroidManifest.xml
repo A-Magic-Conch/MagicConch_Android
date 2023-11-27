@@ -51,6 +51,12 @@
         <activity android:name=".clothpage.seasonpage.clothaddpage.SummerAdd" />
         <activity android:name=".clothpage.seasonpage.clothaddpage.WinterAdd" />
         <activity
+            android:name=".activity.Activity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.Activity_result"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
