@@ -11,10 +11,11 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:drawableTint="#AA83BA"
         android:text="UserID: "
         android:textColor="#AA83BA"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/name1"
@@ -31,7 +32,9 @@
         android:gravity="left"
         android:text="옷장"
         android:textColor="#AA83BA"
-        android:textSize="15dp"
+        android:textSize="16dp"
+        android:layout_marginBottom="47dp"
+        android:layout_marginRight="70dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,13 +83,18 @@
                 android:id="@+id/date_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="날짜: " />
+                android:orientation="horizontal"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:text="📆 Date: " />
 
             <TextView
                 android:id="@+id/activity_text1"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="옷장"
+                android:text="👖 Cloth"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -131,19 +139,41 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/activity_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="활동"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
             <LinearLayout
                 android:id="@+id/option"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="🎈 Play "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="🍕 Food "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

@@ -1,6 +1,7 @@
 package com.android.magicconch.Food;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -84,9 +85,16 @@ public class Food extends AppCompatActivity {
                 seekBarValues.add(SB_sa.isEnabled() ? String.valueOf(SB_sa.getProgress()*.1f) : "r");
                 seekBarValues.add(SB_sp.isEnabled() ? String.valueOf(SB_sp.getProgress()*.1f) : "r");
 
+
                 Intent intent = new Intent(Food.this, Food_result.class);
                 intent.putStringArrayListExtra("seekBarValues", seekBarValues);
                 startActivity(intent);
+
+                SharedPreferences sharedPreferences = getSharedPreferences("FoodPreferences", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.apply();
+
+
             }
         });
     }
