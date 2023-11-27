@@ -79,7 +79,7 @@ public class RekAddPage extends AppCompatActivity {
         WeatherApi weatherApi = retrofit.create(WeatherApi.class);
         Call<WeatherResponse> call = weatherApi.getWeather(
                 "y22xUV9DMD/dNGMQQurE6tO0slcOoTIZiiiaXT++N3HT08IfBj3VvNqlD7ynr/IbN1YkB+2tUGWoqxWW/X5uRg==",
-                "55", "92", "14", "20231121","2000", "json");
+                "55", "92", "14", "20231126","1400", "json");
 
         call.enqueue(new Callback<WeatherResponse>() {
             @Override

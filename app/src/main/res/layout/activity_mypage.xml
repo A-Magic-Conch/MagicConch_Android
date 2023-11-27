@@ -87,6 +87,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/wintercloset1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#AAE83F"
+                    android:text="옷장1"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/wintercloset2"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#AAE83F"
+                    android:text="옷장2"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/wintercloset3"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#AAE83F"
+                    android:text="옷장3"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
         </LinearLayout>
 
     </ScrollView>
@@ -110,6 +152,7 @@
         android:layout_width="220dp"
         android:layout_height="45dp"
         android:backgroundTint="#AAE83F"
+        android:textStyle="bold"
         android:text="Logout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.magicconch.clothpage.seasonpage.clothaddpage.wintercloset.wincloset1;
+import com.android.magicconch.clothpage.seasonpage.clothaddpage.wintercloset.wincloset2;
+import com.android.magicconch.clothpage.seasonpage.clothaddpage.wintercloset.wincloset3;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -36,6 +39,37 @@ public class Mypage extends AppCompatActivity {
             startActivity(new Intent(this, Login.class));
             finish();
         }
+
+        findViewById(R.id.wintercloset1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(Mypage.this, wincloset1.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        findViewById(R.id.wintercloset2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(Mypage.this, wincloset2.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        findViewById(R.id.wintercloset3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(Mypage.this, wincloset3.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         findViewById(R.id.logout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
