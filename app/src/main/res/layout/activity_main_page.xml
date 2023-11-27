@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/food_bg"
+    android:background="@drawable/mainpage_text"
     tools:context=".MainPage"
     android:orientation="vertical">
 
@@ -26,8 +26,8 @@
             android:background="#B3000000"
             android:backgroundTint="#95F4F7"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/closet_img" />
-
+            app:srcCompat="@drawable/closet_img"
+            android:contentDescription="옷장 이미지 버튼" />
         <ImageButton
             android:id="@+id/imgBtn2"
             android:layout_width="48dp"
@@ -37,8 +37,8 @@
             android:background="#B3000000"
             android:backgroundTint="#95F4F7"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/food_img" />
-
+            app:srcCompat="@drawable/food_img"
+            android:contentDescription="음식 이미지 버튼" />
         <ImageButton
             android:id="@+id/imgBtn3"
             android:layout_width="48dp"
@@ -49,7 +49,8 @@
             android:backgroundTint="#95F4F7"
             android:longClickable="false"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/activity_img" />
+            app:srcCompat="@drawable/activity_img"
+            android:contentDescription="활동 이미지 버튼" />
     </LinearLayout>
 
     <LinearLayout
@@ -83,7 +84,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#00FFFFFF"
-            app:srcCompat="@drawable/btnimg1" />
+            app:srcCompat="@drawable/btnimg1"
+            android:contentDescription="첫 번째 이미지 버튼" />
 
         <ImageButton
             android:id="@+id/imageButton2"
@@ -91,9 +93,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#00FFFFFF"
-            app:srcCompat="@drawable/btnimg2" />
+            app:srcCompat="@drawable/btnimg2"
+            android:contentDescription="두 번째 이미지 버튼" />
+
 
     </LinearLayout>
-
 
 </LinearLayout>

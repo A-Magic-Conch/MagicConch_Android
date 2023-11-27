@@ -16,10 +16,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
         android:gravity="center"
-        android:text=" "
-        android:textColor="@color/white"
-        android:textSize="35dp"
-        android:textStyle="bold" />
+        />
 
     <EditText
         android:id="@+id/username"
@@ -71,6 +68,16 @@
         android:backgroundTint="#AA83BA"
         android:text="LOGIN" />
 
+    <Button
+        android:id="@+id/signupbtn"
+        android:layout_width="141dp"
+        android:layout_height="69dp"
+        android:layout_below="@id/loginbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#AA83BA"
+        android:text="Sign Up" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,6 +94,7 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/google"
             android:scaleType="fitCenter"
+            android:contentDescription = "Google 로그인 버튼"
             android:background="@android:color/transparent"/>
 
         <ImageButton
@@ -97,6 +105,7 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/fb"
             android:scaleType="fitCenter"
+            android:contentDescription= "페이스북 로그인 버튼"
             android:background="@android:color/transparent"/>
 
         <ImageButton
@@ -108,12 +117,9 @@
             android:longClickable="false"
             app:srcCompat="@drawable/twitter"
             android:scaleType="fitCenter"
+            android:contentDescription = "트위터 로그인 버튼"
             android:background="@android:color/transparent"/>
 
     </LinearLayout>
-
-
-
-
 
 </RelativeLayout>

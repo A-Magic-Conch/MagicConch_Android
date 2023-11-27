@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/food_bg"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.3"
+        android:drawableTint="#AA83BA"
+        android:paddingLeft="20dp"
+        android:text="오늘 뭐 하지?"
+        android:textColor="#AA83BA"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:gravity="bottom" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="6.5"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:scrollbars="vertical"
+                android:text="미선택시 랜덤!"
+                android:textColor="#A0D539"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/TV1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:text="1. 실내 or 실외"
+                android:textColor="#7DAD1E"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="실내활동" />
+
+                <RadioButton
+                    android:id="@+id/out"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="실외활동" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TV4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:text="2. 시골쥐 vs 도시쥐 "
+                android:textColor="#7DAD1E"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/tag21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="자연" />
+                <RadioButton
+                    android:id="@+id/tag22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="도시" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TV2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingTop="4dp"
+                android:paddingLeft="10dp"
+                android:scrollbars="vertical"
+                android:text="3. 지금 하고싶은건?"
+                android:textColor="#7DAD1E"
+                android:textSize="18sp" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/tag1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="액티비티" />
+
+                <RadioButton
+                    android:id="@+id/tag2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="기념품" />
+                <RadioButton
+                    android:id="@+id/tag3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="엔터테인먼트" />
+                <RadioButton
+                    android:id="@+id/tag4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="문화" />
+            </RadioGroup>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/tag5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="문화,교육" />
+                <RadioButton
+                    android:id="@+id/tag6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="공예" />
+                <RadioButton
+                    android:id="@+id/tag7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="음식" />
+                <RadioButton
+                    android:id="@+id/tag8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="자연" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TV3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:text="4. 어떤 방식으로?"
+                android:textColor="#7DAD1E"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/tag11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="관람" />
+                <RadioButton
+                    android:id="@+id/tag12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="참여" />
+                <RadioButton
+                    android:id="@+id/tag13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="휴식" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.7">
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B2ED3C"
+            android:text="가자!"/>
+    </LinearLayout>
+
+</LinearLayout>
