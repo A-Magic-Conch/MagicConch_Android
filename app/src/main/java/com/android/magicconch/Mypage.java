@@ -3,10 +3,14 @@ package com.android.magicconch;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.android.magicconch.activity.Activity_result;
 import com.android.magicconch.clothpage.seasonpage.clothaddpage.wintercloset.wincloset1;
 import com.android.magicconch.clothpage.seasonpage.clothaddpage.wintercloset.wincloset2;
 import com.android.magicconch.clothpage.seasonpage.clothaddpage.wintercloset.wincloset3;
@@ -87,6 +91,28 @@ public class Mypage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+// SharedPreferences에서 선택된 텍스트 가져오기
+        SharedPreferences sharedPreferences = getSharedPreferences("SelectedText", MODE_PRIVATE);
+        String text = sharedPreferences.getString("text", "");
+
+// 가져온 텍스트로 버튼 생성
+        Button button = new Button(this);
+        button.setText(text);
+
+// 버튼 클릭 시 Activity_result 클래스로 이동
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Mypage.this, Activity_result.class);
+                intent.putExtra("plz", text != null ? text : "명소");
+                startActivity(intent);
+            }
+        });
+
+// 레이아웃에 버튼 추가
+        LinearLayout layout = findViewById(R.id.option);
+        layout.addView(button);
 
     }
 }
